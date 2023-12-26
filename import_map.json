@@ -1,5 +1,6 @@
 {
   "imports": {
-    "hono": "https://deno.land/x/mysql@v2.12.1/mod.ts"
+    "mysql": "https://deno.land/x/mysql@v2.12.1/mod.ts",
+    "asserts": "https://deno.land/std@0.104.0/testing/asserts.ts"
   }
 }

@@ -1,4 +1,5 @@
 import Field from "../shared/domain/Field.ts";
+import Turn from "./Turn.ts";
 
 export class ClassroomAndTurn {
     // default empty value
@@ -6,7 +7,7 @@ export class ClassroomAndTurn {
     private static readonly TURN_PATTERN = /[MTN]/.source;
     private static readonly PATTERN = new RegExp(`^${ClassroomAndTurn.CLASSROOM_PATTERN}(-${ClassroomAndTurn.TURN_PATTERN})?$`, "gi");
 
-    private constructor(public readonly classroom?: string, public readonly turn?: string) {
+    private constructor(public readonly classroom?: string, public readonly turn?: Turn) {
     }
 
     private static readonly EMPTY: Field<ClassroomAndTurn> = {
@@ -39,7 +40,7 @@ export class ClassroomAndTurn {
         const matches = match[0].split("-");
 
         const classroom = matches.length === 3 ? `${matches[0]}-${matches[1]}` : matches[0];
-        const turn = matches.length === 3 ? matches[2] : matches[1];
+        const turn: Turn = (matches.length === 3 ? matches[2] : matches[1]) as Turn;
 
         return {
             ok: true,
