@@ -1,6 +1,6 @@
-import {assertEquals} from "https://deno.land/std@0.209.0/assert/mod.ts";
+import {assertEquals} from "asserts";
 import ClassroomAndTurn from "../../../src/modules/groups/ClassroomAndTurn.ts";
-import {Field} from "../../../src/modules/shared/domain/Field.ts";
+import Field from "../../../src/modules/shared/domain/Field.ts";
 
 Deno.test({
     name: "Cuando se envía aula sin formato válido debe devolver un error",
@@ -15,42 +15,13 @@ Deno.test({
             "  19A-M  ",
             "  34A-M-T  ",
         ];
-        const expected: Field<ClassroomAndTurn>[] = [
-            {
-                ok: false,
-                error: "Aula sin formato válido, por ejemplo: 102-M, Lab-A-T, 406 D, etc.",
-            },
-            {
-                ok: false,
-                error: "Aula sin formato válido, por ejemplo: 102-M, Lab-A-T, 406 D, etc.",
-            },
-            {
-                ok: false,
-                error: "Aula sin formato válido, por ejemplo: 102-M, Lab-A-T, 406 D, etc.",
-            },
-            {
-                ok: false,
-                error: "Aula sin formato válido, por ejemplo: 102-M, Lab-A-T, 406 D, etc.",
-            },
-            {
-                ok: false,
-                error: "Aula sin formato válido, por ejemplo: 102-M, Lab-A-T, 406 D, etc.",
-            },
-            {
-                ok: false,
-                error: "Aula sin formato válido, por ejemplo: 102-M, Lab-A-T, 406 D, etc.",
-            },
-            {
-                ok: false,
-                error: "Aula sin formato válido, por ejemplo: 102-M, Lab-A-T, 406 D, etc.",
-            },
-            {
-                ok: false,
-                error: "Aula sin formato válido, por ejemplo: 102-M, Lab-A-T, 406 D, etc.",
-            },
-        ]
-        requests.forEach((request, index) => {
-            assertEquals(ClassroomAndTurn.of(request), expected[index]);
+        const expected: Field<ClassroomAndTurn> = {
+            ok: false,
+            error: "Aula sin formato válido, por ejemplo: 102-M, Lab-A-T, 406 D, etc.",
+        }
+
+        requests.forEach(request => {
+            assertEquals(ClassroomAndTurn.of(request), expected);
         });
     },
 })
@@ -64,14 +35,10 @@ Deno.test({
             "  ",
         ];
 
-        const expected: Field<ClassroomAndTurn>[] = [
-            ClassroomAndTurn.empty(),
-            ClassroomAndTurn.empty(),
-            ClassroomAndTurn.empty(),
-        ]
+        const expected = ClassroomAndTurn.empty()
         // iterate over requests
-        requests.forEach((request, index) => {
-            assertEquals(ClassroomAndTurn.of(request), expected[index]);
+        requests.forEach(request => {
+            assertEquals(ClassroomAndTurn.of(request), expected);
         });
     },
 })

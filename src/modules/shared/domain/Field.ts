@@ -1,9 +1,9 @@
-export type Field<T> = {
-    ok: true,
-    value: T
-} | {
+type Field<T> = {
     ok: false,
-    error: string
+    error: string,
+} | {
+    ok: true,
+    value: T,
 }
 
 export default Field

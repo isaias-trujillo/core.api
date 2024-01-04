@@ -1,0 +1,130 @@
+[
+  {
+    "semester": 20232,
+    "group": {
+      "classroom": "412",
+      "autofinanciad": true,
+      "subject": "MATEMÁTICA I",
+      "teacher": {
+        "first name": "JORGE JAVIER",
+        "last name": "GAVELAN",
+        "second last name": "GAMARRA",
+        "dni": "10659329"
+      },
+      "sections": [
+        {
+          "number": 1,
+          "course": {
+            "code": "113146",
+            "facultyId": 11,
+            "schoolId": 3,
+            "plan": 2022,
+            "cycle": 1,
+            "credits": 3,
+            "subject": "MATEMÁTICA I"
+          }
+        },
+        {
+          "number": 1,
+          "course": {
+            "code": "112146",
+            "facultyId": 11,
+            "schoolId": 2,
+            "plan": 2022,
+            "cycle": 1,
+            "credits": 3,
+            "subject": "MATEMÁTICA I"
+          }
+        },
+        {
+          "number": 1,
+          "course": {
+            "code": "114105",
+            "facultyId": 11,
+            "schoolId": 4,
+            "plan": 2023,
+            "cycle": 1,
+            "credits": 3,
+            "subject": "MATEMÁTICA I"
+          }
+        },
+        {
+          "number": 1,
+          "course": {
+            "code": "111146",
+            "facultyId": 11,
+            "schoolId": 1,
+            "plan": 2022,
+            "cycle": 1,
+            "credits": 3,
+            "subject": "MATEMÁTICA I"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "semester": 20232,
+    "group": {
+      "classroom": "412",
+      "autofinanciad": true,
+      "subject": "MATEMÁTICA I",
+      "teacher": {
+        "first name": "JAIME BERNABEL",
+        "last name": "TORRES",
+        "second last name": "RAMIREZ",
+        "dni": "06037364"
+      },
+      "sections": [
+        {
+          "number": 2,
+          "course": {
+            "code": "113146",
+            "facultyId": 11,
+            "schoolId": 3,
+            "plan": 2022,
+            "cycle": 1,
+            "credits": 3,
+            "subject": "MATEMÁTICA I"
+          }
+        },
+        {
+          "number": 2,
+          "course": {
+            "code": "112146",
+            "facultyId": 11,
+            "schoolId": 2,
+            "plan": 2022,
+            "cycle": 1,
+            "credits": 3,
+            "subject": "MATEMÁTICA I"
+          }
+        },
+        {
+          "number": 2,
+          "course": {
+            "code": "114105",
+            "facultyId": 11,
+            "schoolId": 4,
+            "plan": 2023,
+            "cycle": 1,
+            "credits": 3,
+            "subject": "MATEMÁTICA I"
+          }
+        },
+        {
+          "number": 2,
+          "course": {
+            "code": "111146",
+            "facultyId": 11,
+            "schoolId": 1,
+            "plan": 2022,
+            "cycle": 1,
+            "credits": 3,
+            "subject": "MATEMÁTICA I"
+          }
+        }
+      ]
+    }
+  }
+]

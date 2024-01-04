@@ -1,0 +1,17 @@
+export default interface UncleanedRequest {
+    'cod_asignatura': string,
+    'cod_seccion': string,
+    'cod_facultad': string,
+    'cod_escuela': string,
+    'cod_plan': string,
+    'cod_semestre': string,
+    'autofinanciado': string,
+    'aula_turno': string,
+    'num_ciclo_ano_asignatura': string,
+    'num_creditaje': string,
+    'des_asignatura': string,
+    'ape_paterno': string,
+    'ape_materno': string,
+    'nom_docente': string,
+    'dni': string,
+}

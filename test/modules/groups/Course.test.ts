@@ -1,5 +1,5 @@
 import {assertEquals} from "asserts";
-import Course from "../../../src/modules/groups/Course.ts";
+import CourseName from "../../../src/modules/groups/CourseName.ts";
 
 Deno.test({
     name: "Cuando se crea un curso con un nombre vacío, debe fallar",
@@ -10,7 +10,7 @@ Deno.test({
             '  ',
         ]
         request.forEach(name => {
-            const result = Course.from(name);
+            const result = CourseName.from(name);
             assertEquals(result.tag, 'left');
         })
     }
@@ -25,7 +25,7 @@ Deno.test({
             "@sA?>REY^ ^&AS <VF"
         ]
         request.forEach(name => {
-            const result = Course.from(name);
+            const result = CourseName.from(name);
             assertEquals(result.tag, 'left');
         })
     }
@@ -49,9 +49,9 @@ Deno.test({
             "Seminario NIC y NIF con Incidencia Tributaria",
         ]
         request.forEach((name, index) => {
-            const result = Course.from(name);
+            const result = CourseName.from(name);
             if (result.tag === 'left') {
-                throw new Error('Course creation failed')
+                throw result.value
             }
             const course = result.value
             assertEquals(course.value, expected[index]);
