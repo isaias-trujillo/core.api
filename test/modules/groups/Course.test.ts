@@ -11,7 +11,7 @@ Deno.test({
         ]
         request.forEach(name => {
             const result = CourseName.from(name);
-            assertEquals(result.tag, 'left');
+            assertEquals(result.ok, false);
         })
     }
 })
@@ -26,7 +26,7 @@ Deno.test({
         ]
         request.forEach(name => {
             const result = CourseName.from(name);
-            assertEquals(result.tag, 'left');
+            assertEquals(result.ok, false);
         })
     }
 })
@@ -50,11 +50,11 @@ Deno.test({
         ]
         request.forEach((name, index) => {
             const result = CourseName.from(name);
-            if (result.tag === 'left') {
-                throw result.value
+            if (result.ok === false) {
+                throw result.error
             }
             const course = result.value
-            assertEquals(course.value, expected[index]);
+            assertEquals(course, expected[index]);
         })
     }
 })

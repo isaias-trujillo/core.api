@@ -1,6 +1,6 @@
-import Property from "../shared/domain/Property.ts";
+import BasicProperty from "../shared/domain/BasicProperty.ts";
 
-export default class CourseName extends Property<string> {
+export default class CourseName extends BasicProperty<string> {
 
     private static readonly UPPER_CASE_WORDS = [
         "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
