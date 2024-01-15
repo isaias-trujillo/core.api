@@ -4,7 +4,7 @@ type RestructuredRequest = {
     group: {
         classroom: string | undefined, // aula_turno (solo el aula)
         turn: string | undefined, // aula_turno (solo el turno)
-        autofinanciad: boolean, // autofinanciado
+        'self-financed': boolean, // autofinanciado
         subject: string, // des_asignatura
         teacher: {
             'first name': string, // nom_docente

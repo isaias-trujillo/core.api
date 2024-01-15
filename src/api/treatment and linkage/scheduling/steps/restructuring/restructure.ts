@@ -15,7 +15,7 @@ const restructure = (requests: SanitizedRequest[]): RestructuredRequest[] => {
             group: {
                 classroom: request['aula_turno']?.split('-')[0],
                 turn: request['aula_turno']?.split('-')[1],
-                autofinanciad: request['autofinanciado'],
+                'self-financed': request['autofinanciado'],
                 subject: request['des_asignatura'],
                 teacher: {
                     'first name': request['nom_docente'],

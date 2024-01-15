@@ -7,7 +7,7 @@ const group = (requests: RestructuredRequest[]) => {
         const index = acc.findIndex((grouped) => {
             return grouped.group.classroom === request.group.classroom
                 && grouped.group.turn === request.group.turn
-                && grouped.group.autofinanciad === request.group.autofinanciad
+                && grouped.group['self-financed'] === request.group['self-financed']
                 && grouped.group.subject === request.group.subject
                 && grouped.group.teacher.dni === request.group.teacher.dni
         });
@@ -19,7 +19,7 @@ const group = (requests: RestructuredRequest[]) => {
                 group: {
                     classroom: request.group.classroom,
                     turn: request.group.turn,
-                    autofinanciad: request.group.autofinanciad,
+                    'self-financed': request.group['self-financed'],
                     subject: request.group.subject,
                     teacher: request.group.teacher,
                     sections: [

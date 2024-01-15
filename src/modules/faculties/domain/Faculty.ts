@@ -1,3 +1,6 @@
-export class Faculty {
-
+type Faculty = {
+    name: string
+    code: number
 }
+
+export default Faculty

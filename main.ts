@@ -7,7 +7,6 @@ app.get('/', (c) => {
     return c.json({message: "Hello world!"});
 });
 
-
 app.route('/treatment-and-linkage/scheduling', routes);
 
 Deno.serve({
